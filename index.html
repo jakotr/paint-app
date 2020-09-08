@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>paint-app</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="wrapper">
+        <div class="toolbox-left">
+            <div class="toolbox-left__file-handling group">
+                <div class="group__icon">
+                    <img src="img/undo.png" data-icon="undo" alt="">
+                </div>
+                <div class="group__icon">
+                    <img src="img/download.png" data-icon="download" alt="">
+                </div>
+            </div>
+            <div class="toolbox-left__shape group">
+                <div class="group__icon">
+                    <img src="img/line.png" data-icon="line" alt="">
+                </div>
+                <div class="group__icon">
+                    <img src="img/square.png" data-icon="square" alt="">
+                </div>
+                <div class="group__icon">
+                    <img src="img/circle.png" data-icon="circle" alt="">
+                </div>
+                <div class="group__icon">
+                    <img src="img/triangle.png" data-icon="triangle" alt="">
+                </div>
+            </div>
+            <div class="toolbox-left__marker group">
+                <div class="group__icon">
+                    <img src="img/pen.png" data-icon="pen" alt="">
+                </div>
+                <div class="group__icon">
+                    <img src="img/brush.png" data-icon="brush" alt="">
+                </div>
+                <div class="group__icon">
+                    <img src="img/paint.png" data-icon="paint" alt="">
+                </div>
+            </div>
+            <div class="toolbox-left__line-options group">
+                <div class="group__line-width" data-line-width="1">
+                    <div class="group__line-width__icon ln1"></div>
+                </div>
+                <div class="group__line-width" data-line-width="1">
+                    <div class="group__line-width__icon ln2"></div>
+                </div>
+                <div class="group__line-width" data-line-width="1">
+                    <div class="group__line-width__icon ln3"></div>
+                </div>
+                <div class="group__line-width" data-line-width="1">
+                    <div class="group__line-width__icon ln4"></div>
+                </div>
+                <div class="group__line-width" data-line-width="1">
+                    <div class="group__line-width__icon ln5"></div>
+                </div>
+            </div>
+        </div>
+
+        <canvas id='canvas'></canvas>
+
+        <div class="toolbox-right">
+            <div class="toolbox-right__colors group">
+                <div class="toolbox-right__colors__color" data-color="#ffffff" style="background-color: #ffffff;"></div>
+                <div class="toolbox-right__colors__color" data-color="#000000" style="background-color: #000000;"></div>
+                <div class="toolbox-right__colors__color" data-color="#999999" style="background-color: #999999;"></div>
+                <div class="toolbox-right__colors__color" data-color="#ff0000" style="background-color: #ff0000;"></div>
+                <div class="toolbox-right__colors__color" data-color="#ffff00" style="background-color: #ffff00;"></div>
+                <div class="toolbox-right__colors__color" data-color="#00ff00" style="background-color: #00ff00;"></div>
+                <div class="toolbox-right__colors__color" data-color="#00ffff" style="background-color: #00ffff;"></div>
+                <div class="toolbox-right__colors__color" data-color="#0000ff" style="background-color: #0000ff;"></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
