@@ -12,40 +12,40 @@
     <div class="wrapper">
         <div class="toolbox-left">
             <div class="toolbox-left__file-handling group">
-                <div class="group__icon">
-                    <img src="img/undo.png" data-icon="undo" alt="">
+                <div class="group__icon" data-icon="undo">
+                    <img src="img/undo.png" alt="">
                 </div>
-                <div class="group__icon">
-                    <img src="img/download.png" data-icon="download" alt="">
+                <div class="group__icon" data-icon="download">
+                    <img src="img/download.png" alt="">
                 </div>
             </div>
             <div class="toolbox-left__shape group">
-                <div class="group__icon">
-                    <img src="img/line.png" data-icon="line" alt="">
+                <div class="group__icon active" data-icon="line">
+                    <img src="img/line.png" alt="">
                 </div>
-                <div class="group__icon">
-                    <img src="img/square.png" data-icon="square" alt="">
+                <div class="group__icon" data-icon="rectangle">
+                    <img src="img/square.png" alt="">
                 </div>
-                <div class="group__icon">
-                    <img src="img/circle.png" data-icon="circle" alt="">
+                <div class="group__icon" data-icon="circle">
+                    <img src="img/circle.png" alt="">
                 </div>
-                <div class="group__icon">
-                    <img src="img/triangle.png" data-icon="triangle" alt="">
+                <div class="group__icon" data-icon="triangle">
+                    <img src="img/triangle.png" alt="">
                 </div>
             </div>
             <div class="toolbox-left__marker group">
-                <div class="group__icon">
-                    <img src="img/pen.png" data-icon="pen" alt="">
+                <div class="group__icon" data-icon="pen">
+                    <img src="img/pen.png" alt="">
                 </div>
-                <div class="group__icon">
-                    <img src="img/brush.png" data-icon="brush" alt="">
+                <div class="group__icon" data-icon="brush">
+                    <img src="img/brush.png" alt="">
                 </div>
-                <div class="group__icon">
-                    <img src="img/paint.png" data-icon="paint" alt="">
+                <div class="group__icon" data-icon="paint">
+                    <img src="img/paint.png" alt="">
                 </div>
             </div>
             <div class="toolbox-left__line-options group">
-                <div class="group__line-width" data-line-width="1">
+                <div class="group__line-width active" data-line-width="1">
                     <div class="group__line-width__icon ln1"></div>
                 </div>
                 <div class="group__line-width" data-line-width="1">
@@ -67,17 +67,37 @@
 
         <div class="toolbox-right">
             <div class="toolbox-right__colors group">
-                <div class="toolbox-right__colors__color" data-color="#ffffff" style="background-color: #ffffff;"></div>
-                <div class="toolbox-right__colors__color" data-color="#000000" style="background-color: #000000;"></div>
-                <div class="toolbox-right__colors__color" data-color="#999999" style="background-color: #999999;"></div>
-                <div class="toolbox-right__colors__color" data-color="#ff0000" style="background-color: #ff0000;"></div>
-                <div class="toolbox-right__colors__color" data-color="#ffff00" style="background-color: #ffff00;"></div>
-                <div class="toolbox-right__colors__color" data-color="#00ff00" style="background-color: #00ff00;"></div>
-                <div class="toolbox-right__colors__color" data-color="#00ffff" style="background-color: #00ffff;"></div>
-                <div class="toolbox-right__colors__color" data-color="#0000ff" style="background-color: #0000ff;"></div>
+                <div class="toolbox-right__colors__wrapper" data-color="#ffffff">
+                    <div class="toolbox-right__colors__wrapper__color" style="background-color: #ffffff;"></div>
+                </div>
+                <div class="toolbox-right__colors__wrapper active" data-color="#000000">
+                    <div class="toolbox-right__colors__wrapper__color" style="background-color: #000000;"></div>
+                </div>
+                <div class="toolbox-right__colors__wrapper" data-color="#999999">
+                <div class="toolbox-right__colors__wrapper__color" style="background-color: #999999;"></div>
+                </div>
+                <div class="toolbox-right__colors__wrapper" data-color="#ff0000">
+                    <div class="toolbox-right__colors__wrapper__color" style="background-color: #ff0000;"></div>
+                </div>
+                <div class="toolbox-right__colors__wrapper" data-color="#ffff00">
+                    <div class="toolbox-right__colors__wrapper__color" style="background-color: #ffff00;"></div>
+                </div>
+                <div class="toolbox-right__colors__wrapper" data-color="#00ff00">
+                    <div class="toolbox-right__colors__wrapper__color" style="background-color: #00ff00;"></div>
+                </div>
+                <div class="toolbox-right__colors__wrapper" data-color="#00ffff">
+                    <div class="toolbox-right__colors__wrapper__color" style="background-color: #00ffff;"></div>
+                </div>
+                <div class="toolbox-right__colors__wrapper" data-color="#0000ff">
+                    <div class="toolbox-right__colors__wrapper__color" style="background-color: #0000ff;"></div>
+                </div>
+                
+                
             </div>
         </div>
     </div>
+
+    <script src="js/index.js" type="module"></script>
 
 </body>
 </html>
