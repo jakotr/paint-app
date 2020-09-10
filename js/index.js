@@ -1,11 +1,17 @@
 // lineWidth check if its working with the brush or todo new one in html like 1407
 
 import Tool from './Tool.js';
+import Paint from './Paint.js';
 
 const icons = document.querySelectorAll('.group__icon');
 const lineWidthGroup = document.querySelector('.toolbox-left__line-options');
 const lineWidth = document.querySelectorAll('.group__line-width');
 const colorPick = document.querySelectorAll('.toolbox-right__colors__wrapper');
+
+const paint = new Paint('canvas');
+paint.activeTool = Tool.TOOL_LINE;
+paint.init();
+
 // listener for icons on left toolbox (without the line width)
 icons.forEach(icon => {
     icon.addEventListener('click', (e) => {
@@ -16,6 +22,7 @@ icons.forEach(icon => {
         } 
         
         let selectedTool = icon.dataset.icon;
+        paint.activeTool = selectedTool;
             
         switch (selectedTool) {
             case Tool.TOOL_LINE:

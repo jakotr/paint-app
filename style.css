@@ -38,7 +38,8 @@ body {
     top: 50%;
     transform: translate(-50%, -50%);
     background-color: #fff;
-    border: 3px solid #000;
+    cursor: crosshair;
+    /* border: 3px solid #000; */
 }
 
 .toolbox-right {
