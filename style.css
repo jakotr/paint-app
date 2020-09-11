@@ -44,7 +44,6 @@ body {
 
 .toolbox-right {
     height: 100vh;
-    min-width: 50px;
     max-width: 80px;
     min-width: 50px;
     position: absolute;
@@ -63,7 +62,7 @@ body {
 }
 
 .group__icon {
-    width: 100%;
+    width: 50px;
     height: 52px;
     display: flex;
     align-items: center;
@@ -85,7 +84,7 @@ body {
 
 .group__line-width {
     cursor: pointer;
-    width: 100%;
+    width: 50px;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -160,4 +159,65 @@ body {
     margin: 10px 0;
     transition: .2s;
     /* border: 1px solid #aaa; */
+}
+
+@media (max-width: 768px) {
+    #canvas {
+        width: 80vw;
+        height: 60vw;
+    }
+    .toolbox-left {
+        min-width: 100vw;
+        min-height: 50px;
+        max-height: 150px;
+        height: auto;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .toolbox-left__file-handling {
+        max-height: 50px;
+    }
+    .toolbox-left__line-options {
+        height: 50px;
+    }
+    .toolbox-left__shape {
+        max-height: 50px;
+    }
+    .toolbox-left__marker {
+        max-height: 50px;
+    }
+    .toolbox-right {
+        min-width: 100vw;
+        min-height: 50px;
+        flex-direction: row;
+        top: calc(100% - 50px);
+        height: auto;
+    }
+    .group {
+        flex-direction: row;
+        border: none;
+        border-right: 1px solid #aaa;
+        /* flex-wrap: wrap; */
+    }
+    .group__icon {
+        padding: 3px 10px;
+    }
+    .group__icon img {
+        width: 24px;
+        height: 24px;
+    }
+    .group__line-width {
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 612px) {
+    #canvas {
+        width: 100vw;
+        height: 75vw;
+    }
+    .group {
+        border: none;
+    }
 }

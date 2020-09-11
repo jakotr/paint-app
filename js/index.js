@@ -10,6 +10,8 @@ const colorPick = document.querySelectorAll('.toolbox-right__colors__wrapper');
 
 const paint = new Paint('canvas');
 paint.activeTool = Tool.TOOL_LINE;
+paint.activeLineWidth = 1;
+paint.activeColor = '#000000';
 paint.init();
 
 // listener for icons on left toolbox (without the line width)
@@ -44,6 +46,9 @@ lineWidth.forEach(width => {
     width.addEventListener('click', () => {
         document.querySelector('[data-line-width].active').classList.toggle('active');
         width.classList.toggle('active');
+
+        let activeLineWidth = width.dataset.lineWidth;
+        paint.activeLineWidth = activeLineWidth;
     });
 });
 
@@ -52,5 +57,8 @@ colorPick.forEach(color => {
     color.addEventListener('click', () => {
         document.querySelector('[data-color].active').classList.toggle('active');
         color.classList.toggle('active');
+
+        let activeColor = color.dataset.color;
+        paint.activeColor = activeColor;
     });
 });
