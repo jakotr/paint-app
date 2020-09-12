@@ -1,5 +1,6 @@
 import {  getMouseXYOnCanvas, mobileAndTabletCheck  } from './util.js';
 import Tool from './Tool.js';
+import FloodFill from './FloodFill.js';
 
 export default class Paint {
     constructor(canvas) {
@@ -23,7 +24,7 @@ export default class Paint {
     }
 
     init() {
-        console.log(mobileAndTabletCheck())
+        // console.log(mobileAndTabletCheck())
         mobileAndTabletCheck() ? this.canvas.ontouchstart = e => this.onMouseDown(e) : this.canvas.onmousedown = e => this.onMouseDown(e);
         
     }
@@ -40,9 +41,11 @@ export default class Paint {
         if(this.tool == Tool.TOOL_PEN || this.tool == Tool.TOOL_BRUSH) {
             this.ctx.beginPath();
             this.ctx.moveTo(this.startPos.x, this.startPos.y);
+        } else if(this.tool == Tool.TOOL_PAINT) {
+            new FloodFill(this.canvas, this.startPos, this.color);
         }
 
-        this.setLineWidth();
+
     }
 
     onMouseMove(e) {
@@ -129,7 +132,4 @@ export default class Paint {
         this.ctx.lineTo(this.currentPos.x, this.currentPos.y);
     }
 
-    setLineWidth() {
-
-    }
 }
